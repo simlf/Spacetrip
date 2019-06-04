@@ -3,19 +3,24 @@
 
 <div class="banner home-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path "home-banner" %>');">
 
-<div class="container">
+
     <h1>Spacetrip</h1>
       <div class="link"><%= link_to 'Discover Spaceships', new_user_password_path, class: 'btn btn-primary' %>
-          </div>
-    </div>
+      </div>
+    
 
 </div>
 
 
+  <div class="link">
+    <%= link_to 'Sign in now', user_session_path, class: 'btn btn-primary' %>
+  </div>
 
+</div>
+
+<p class="product_desc">🚀 Find out our best ships 🚀</p>
 
 <!--cards -------------------------------------------------------------------------------------- -->
-
 
 <div class="cards cards-home">
   <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_path "ship1" %>')">
@@ -31,8 +36,14 @@
   </div>
 </div>
 
-
-<!--cards------------------------------------------------------------------------------------ -->
+  <!-- Testimonials -->
+  <div class="testimonial_bar">
+    <div class="testimonial">"Very nice trip to Mars" <br> John Harrell</div>
+    <div class="testimonial">"I had an axesome honeyMoon thanks to Spacetrip" <br> Edward Cohen</div>
+    <div class="testimonial">"The Millenium Falcon was so amazing" <br> Andrew Johnson</div>
+    <div class="testimonial">"Our hosts were very nice to us" <br> Elisabeth Green</div>
+  </div>
+  <!-- Testimonials -->
 
 <div class="cards cards-home">
   <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_path "ship4" %>')">
@@ -47,5 +58,4 @@
     sidewinder
   </div>
 </div>
-
 
