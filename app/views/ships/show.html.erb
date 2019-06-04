@@ -1,11 +1,18 @@
-<h1><%= @ship.name  %></h1>
 
-<img src="https://galacticgazetteer.files.wordpress.com/2015/02/oz10.jpg" alt="" width="500px" height="300px">
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nam similique, cumque natus minima excepturi necessitatibus neque maiores illo! Odio amet quasi, dolor in consectetur id, repellendus neque veniam rerum.</p>
+<div class="block">
+<div class="show">
+  <h1><%= @ship.name  %></h1>
 
-<p>500€/day</p>
+  <%= cl_image_tag @ship.photo, height: 300, width: 500, crop: :fill %>
 
-<p>Pick a date</p>
+  <p><%= @ship.description %></p>
 
-<p>Book now</p>
+  <p>500€/day</p>
+
+  <p>Pick a date</p>
+
+  <p>Book now</p>
+  <div class="link"><%= link_to 'Book now', bookings_path, class: 'btn btn-primary' %>
+</div>
+</div>

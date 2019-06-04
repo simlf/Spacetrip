@@ -1,0 +1,12 @@
+.show {
+  margin: 10px auto;
+  padding: 20px;
+  background: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+  }
+
+.block {
+  margin: 10px auto;
+}
