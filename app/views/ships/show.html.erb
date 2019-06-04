@@ -1,18 +1,21 @@
 
-
 <div class="block">
-<div class="show">
-  <h1><%= @ship.name  %></h1>
+  <div class="show">
+    <div class="background"><%= cl_image_tag @ship.photo, height: 300, width: 500, crop: :fill %></div>
+    <div class="name">
+      <h1><%= @ship.name  %></h1>
+    </div>
+    <div class="price">
+      </div><p>500€/day</p>
+    </div>
+    <div class="description">
+      <p><%= @ship.description %></p>
+    </div>
 
-  <%= cl_image_tag @ship.photo, height: 300, width: 500, crop: :fill %>
+    <div class="footer-card">
+      <p>Pick a date</p>
 
-  <p><%= @ship.description %></p>
-
-  <p>500€/day</p>
-
-  <p>Pick a date</p>
-
-  <p>Book now</p>
-  <div class="link"><%= link_to 'Book now', bookings_path, class: 'btn btn-primary' %>
-</div>
+      <div class="link"><%= link_to 'Book now', bookings_path, class: 'btn btn-primary' %>
+    </div>
+  </div>
 </div>

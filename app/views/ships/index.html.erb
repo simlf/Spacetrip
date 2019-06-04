@@ -1,18 +1,19 @@
 <br>
 <h2>Those ships are available:</h2>
 
-<div class="card-container">
+<div class="card-container">                         
   <% @ships.each do |ship| %>
-  <div class="card card-index">
-   <img src="https://www.teslarati.com/wp-content/uploads/2018/11/BFR-2018-spaceship-and-booster-sep-SpaceX-crop.jpg">
-   <div class="card-infos">
-      <div>
-      <h2><%= ship.name.capitalize %></h2>
-      <p><%= ship.location.capitalize %></p>
+    <%= link_to ship_path(ship), class: "card-index-link" do %>
+      <div class="card card-index" >
+        <%= cl_image_tag ship.photo, crop: :fill %>
+        <div class="card-infos">
+          <div>
+            <h2><%= ship.name.capitalize %></h2>
+            <p><%= ship.location.capitalize %></p>
+          </div>
+          <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-trip-user avatar-bordered"/>
+        </div>
       </div>
-      <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-user avatar-bordered"/>
-    </div>
-  </div>
+    <% end %>
   <% end %>
 </div>
-
