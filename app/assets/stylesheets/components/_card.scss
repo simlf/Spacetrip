@@ -38,6 +38,12 @@
   width: 40px;
 }
 
+.card-index-link {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 .card-index {
   margin: 50px 40px;
 }
