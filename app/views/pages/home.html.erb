@@ -3,7 +3,14 @@
 
 <div class="banner home-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path "home-banner" %>');">
 
-  <h1>Spacetrip</h1>
+
+    <h1>Spacetrip</h1>
+      <div class="link"><%= link_to 'Discover Spaceships', new_user_password_path, class: 'btn btn-primary' %>
+      </div>
+    
+
+</div>
+
 
   <div class="link">
     <%= link_to 'Sign in now', user_session_path, class: 'btn btn-primary' %>
@@ -38,7 +45,7 @@
   </div>
   <!-- Testimonials -->
 
-<div class="cards">
+<div class="cards cards-home">
   <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_path "ship4" %>')">
     Dolphin
   </div>
