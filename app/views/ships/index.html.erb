@@ -1,19 +1,19 @@
 <br>
 <h2>Those ships are available:</h2>
 
-<% @ships.each do |ship| %>
-  <%= link_to ship_path(ship), class: "card-index-link" do %>
-    <div class="card card-index" >
-      <%= cl_image_tag ship.photo, crop: :fill %>
-      <div class="card-infos">
-        <div>
-          <h2><%= ship.name.capitalize %></h2>
-          <p><%= ship.location.capitalize %></p>
+<div class="card-container">                         
+  <% @ships.each do |ship| %>
+    <%= link_to ship_path(ship), class: "card-index-link" do %>
+      <div class="card card-index" >
+        <%= cl_image_tag ship.photo, crop: :fill %>
+        <div class="card-infos">
+          <div>
+            <h2><%= ship.name.capitalize %></h2>
+            <p><%= ship.location.capitalize %></p>
+          </div>
+          <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-trip-user avatar-bordered"/>
         </div>
-        <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-trip-user avatar-bordered"/>
       </div>
-    </div>
+    <% end %>
   <% end %>
-<% end %>
-
-
+</div>
