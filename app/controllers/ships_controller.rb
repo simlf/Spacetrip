@@ -8,6 +8,7 @@ class ShipsController < ApplicationController
           lat: ship.latitude,
           lng: ship.longitude,
         }
+      end
     else
       @ships = Ship.all
       @markers = @ships.map do |ship|
@@ -15,12 +16,11 @@ class ShipsController < ApplicationController
           lat: ship.latitude,
           lng: ship.longitude,
         }
-
+      end
     end
   end
 
   def show
     @ship = Ship.find(params[:id])
   end
-
 end
