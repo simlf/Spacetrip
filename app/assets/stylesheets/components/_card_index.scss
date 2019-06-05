@@ -1,12 +1,16 @@
 .card-container {
   display: flex;
+  flex-flow: row wrap;
+  padding: 15px
 }
 
 
 .card-index {
-  width: 600px;
-  margin: 50px 10px;
+  width: 400px;
+  margin: 10px 10px 0px 0px;
 }
 
-
+a {
+  color : black;
+}
 

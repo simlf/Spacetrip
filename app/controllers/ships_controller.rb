@@ -1,6 +1,23 @@
 class ShipsController < ApplicationController
+
   def index
-    @ships = Ship.all
+    if params[:query].present?
+      @ships = Ship.where(location: params[:query])
+      @markers = @ships.map do |ship|
+        {
+          lat: ship.latitude,
+          lng: ship.longitude,
+        }
+      end
+    else
+      @ships = Ship.all
+      @markers = @ships.map do |ship|
+        {
+          lat: ship.latitude,
+          lng: ship.longitude,
+        }
+      end
+    end
   end
 
   def show
