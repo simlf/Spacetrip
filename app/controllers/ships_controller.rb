@@ -1,6 +1,10 @@
 class ShipsController < ApplicationController
   def index
-    @ships = Ship.all
+    if params[:query].present?
+      @ships = Ship.where(location: params[:query])
+    else
+      @ships = Ship.all
+    end
   end
 
   def show

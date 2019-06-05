@@ -1,7 +1,17 @@
-<br>
-<h2>Those ships are available:</h2>
 
-<div class="card-container">                         
+<div class="card-container">
+  <%= form_tag ships_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "where"
+    %>
+</div>
+<h1>Those ships are available:</h1>
+
+
+<% end %>
+<div class="card-container">
   <% @ships.each do |ship| %>
     <%= link_to ship_path(ship), class: "card-index-link" do %>
       <div class="card card-index" >
@@ -17,3 +27,4 @@
     <% end %>
   <% end %>
 </div>
+
