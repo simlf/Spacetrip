@@ -1,7 +1,7 @@
 <br>
 <h2>Those ships are available:</h2>
 
-<div class="card-container">                         
+<div class="card-container">
   <% @ships.each do |ship| %>
     <%= link_to ship_path(ship), class: "card-index-link" do %>
       <div class="card card-index" >
