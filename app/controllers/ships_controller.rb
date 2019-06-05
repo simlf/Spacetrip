@@ -1,23 +1,19 @@
 class ShipsController < ApplicationController
+
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
+    @ships = Ship.geocoded
+
     if params[:query].present?
-      @ships = Ship.where(location: params[:query])
-      @markers = @ships.map do |ship|
-        {
-          lat: ship.latitude,
-          lng: ship.longitude,
-        }
-      end
-    else
-      @ships = Ship.all
-      @markers = @ships.map do |ship|
-        {
-          lat: ship.latitude,
-          lng: ship.longitude,
-        }
-      end
+      @ships = @ships.where(location: params[:query])
+    end
+
+    @markers = @ships.map do |ship|
+      {
+        lat: ship.latitude,
+        lng: ship.longitude,
+      }
     end
   end
 
