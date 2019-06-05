@@ -6,13 +6,11 @@
       class: "form-control",
       placeholder: "where"
     %>
+  <% end %>
 </div>
+
 <h1>Those ships are available:</h1>
-
-
-<% end %>
 <div class="card-container">
-
   <% @ships.each do |ship| %>
     <%= link_to ship_path(ship), class: "card-index-link" do %>
       <div class="card card-index" >
