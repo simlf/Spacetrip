@@ -1,4 +1,7 @@
 class ShipsController < ApplicationController
+
+  skip_before_action :authenticate_user!, only: [:index, :show]
+
   def index
     @ships = Ship.geocoded
 
@@ -16,5 +19,7 @@ class ShipsController < ApplicationController
 
   def show
     @ship = Ship.find(params[:id])
+    @booking = Booking.new
+    # To be given to form
   end
 end

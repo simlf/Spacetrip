@@ -1,15 +1,23 @@
-
 <div class="block">
   <div class="background"><%= cl_image_tag @ship.photo, height: 300, width: 500, crop: :fill %></div>
   <div class="card-trip-infos">
     <div class="infos">
       <h1><strong><%= @ship.name.upcase  %></strong></h1>
+      <h2 class="card-trip-pricing"> <%= @ship.price %>€ per week </h2>
+      <p>Capacity : <%= @ship.capacity %> person(s)</p>
       <p><%= @ship.description %></p>
-      <p>Pick a date</p>
+      <!-- <p>Pick a date</p> -->
     </div>
     <div class="infos">
-      <h2 class="card-trip-pricing">500€/day</h2>
-      <div class="link"><%= link_to 'Book now', bookings_path, class: 'btn btn-dark' %>
+
+
+      <%= simple_form_for [@ship, @booking] do |f| %>
+        <%= f.input :starting_date %>
+        <%= f.input :ending_date %>
+        <%= f.submit "Book now" %>
+      <% end %>
+
+
     </div>
   </div>
 </div>
