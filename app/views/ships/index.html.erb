@@ -1,7 +1,18 @@
-<br>
-<h2>Those ships are available:</h2>
 
 <div class="card-container">
+  <%= form_tag ships_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "where"
+    %>
+</div>
+<h1>Those ships are available:</h1>
+
+
+<% end %>
+<div class="card-container">
+
   <% @ships.each do |ship| %>
     <%= link_to ship_path(ship), class: "card-index-link" do %>
       <div class="card card-index" >
@@ -18,6 +29,7 @@
   <% end %>
 </div>
 
+
 <div
   id="map"
   style="width: 50%;
@@ -25,3 +37,4 @@
   data-markers="<%= @markers.to_json %>"
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
 ></div>
+

@@ -41,11 +41,10 @@
 .card-index-link {
   &:hover {
     text-decoration: none;
+    color: #212c60;
   }
 }
 
-.card-index {
-  margin: 50px 40px;
+.card:hover {
+  box-shadow: 0 0 10px rgba(0,0,0,0.35);
 }
-
-
