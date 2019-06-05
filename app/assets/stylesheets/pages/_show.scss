@@ -1,34 +1,18 @@
 .block {
-  padding: 20px;
+  display: flex;
+  margin: 15px auto;
+  width:900px;
+  background-color: white;
 }
 
-.show {
-  margin: 10px auto;
-  padding: 20px;
-  background: white;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 16px;
-  }
-
-.background {
-  grid-template-columns: 2fr;
-
+.infos {
+  margin: 5px 15px;
 }
 
-.show {
-display: grid;
-grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-grid-column-gap: 0px;
-grid-row-gap: 0px;
 
-.background { grid-area: 2 / 2 / 4 / 6; }
-.name { grid-area: 4 / 2 / 5 / 4; }
-.price { grid-area: 4 / 4 / 5 / 6; }
-.description { grid-area: 5 / 2 / 6 / 4; }
-.footer-card { grid-area: 5 / 4 / 6 / 6; }
-
+.btn-dark {
+  position: relative;
+  top: -55px; left: -285px;
+  text-align: left;
 }
-
 
