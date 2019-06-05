@@ -6,10 +6,18 @@
       <h2 class="card-trip-pricing"> <%= @ship.price %>€ per week </h2>
       <p>Capacity : <%= @ship.capacity %> person(s)</p>
       <p><%= @ship.description %></p>
-      <p>Pick a date</p>
+      <!-- <p>Pick a date</p> -->
     </div>
     <div class="infos">
-      <div class="link"><%= link_to 'Book now', ship_bookings_path(@ship), class: 'btn btn-dark' %>
+
+
+      <%= simple_form_for [@ship, @booking] do |f| %>
+        <%= f.input :starting_date %>
+        <%= f.input :ending_date %>
+        <%= f.submit "Book now" %>
+      <% end %>
+
+
     </div>
   </div>
 </div>
