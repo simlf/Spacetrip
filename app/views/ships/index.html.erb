@@ -1,7 +1,7 @@
 <br>
 <h2>Those ships are available:</h2>
 
-<div class="card-container">                         
+<div class="card-container">
   <% @ships.each do |ship| %>
     <%= link_to ship_path(ship), class: "card-index-link" do %>
       <div class="card card-index" >
@@ -17,3 +17,11 @@
     <% end %>
   <% end %>
 </div>
+
+<div
+  id="map"
+  style="width: 50%;
+  height: 400px;"
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+></div>
