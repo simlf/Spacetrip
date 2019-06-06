@@ -9,7 +9,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.ship = Ship.find(params[:ship_id])
     @booking.save
-    redirect_to ships_path
+    redirect_to bookings_path
   end
 
   private
