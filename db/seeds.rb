@@ -127,7 +127,7 @@ Booking.create!(user: kirk, ship: python, status:'refused', starting_date: '2019
 Booking.create!(user: mark_hamill, ship: sidewinder, status:'accepted', starting_date: '2019-06-08', ending_date: '2019-06-29')
 Booking.create!(user: kirk, ship: soft, status:'accepted', starting_date: '2019-05-08', ending_date: '2019-06-29')
 Booking.create!(user: aristide, ship: anubis, status:'accepted', starting_date: '2019-04-10', ending_date: '2019-05-04')
-Booking.create!(user: spock, ship: verity, status:'accepted', starting_date: '2019-04-10', ending_date: '2019-04-15')
+Booking.create!(user: spock, ship: verty, status:'accepted', starting_date: '2019-04-10', ending_date: '2019-04-15')
 Booking.create!(user: spock, ship: curitosity, status:'accepted', starting_date: '2019-04-01', ending_date: '2019-04-09')
 Booking.create!(user: spock, ship: soft, status:'accepted', starting_date: '2019-01-05', ending_date: '2019-02-15')
 Booking.create!(user: spock, ship: azerty2, status:'refused', starting_date: '2019-01-05', ending_date: '2019-02-15')

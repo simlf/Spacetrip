@@ -33,11 +33,6 @@
   text-align: center;
   margin-bottom: 30PX;
   margin-top: 46PX;
-
-
-
-
-
 }
 
 .testimonial_bar{
@@ -51,21 +46,15 @@
   font-family: Raleway;
   font-style: italic;
   text-align: center;
-    background: #fff;
-    z-index: 2;
-    padding: 40px 35px;
-    position: relative;
-    border-radius: 40px;
-    margin: 10px 0;
-    background-color: #c7ccd087;
-    background-image: url(espace.jpg);
-    color:white;
-
-
-
-
-
-
+  background: #fff;
+  z-index: 2;
+  padding: 40px 35px;
+  position: relative;
+  border-radius: 40px;
+  margin: 10px 0;
+  background-color: #c7ccd087;
+  background-image: url(espace.jpg);
+  color:white;
 }
 
 .reviews {
@@ -76,26 +65,21 @@
     position: relative;
     border-radius: 40px;
     padding: 6PX;
-    color:white;
-    background-image: url(earth2.jpg);
+    color:black;
     height: 97PX;
     padding-top: 27PX;;
     margin: 0PX 570PX;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-
 }
 
 
 
 
 .reviews h2 {
- text-size: 25PX;
+  text-size: 25PX;
+}
 
-
-
-
+.stars{
+color: yellow;
 }
 
 
