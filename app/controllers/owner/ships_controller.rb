@@ -8,12 +8,22 @@ class Owner::ShipsController < ApplicationController
   end
 
   def create
-    @ship = ship.new(ship_params)
+    @ship = Ship.new(ship_params)
+    @ship = current_user.ships.new(ship_params)
 
-    if @ship.save
-      redirect_to ship_path(@ship)
-    else
-      render :new
-    end
+    @ship.save
+      redirect_to owner_ships_path
+    # else
+    #    render :new
+    # end
+
+
+
+  end
+
+   private
+
+  def ship_params
+    params.require(:ship).permit(:name, :description, :photo, :location, :capacity, :price)
   end
 end
