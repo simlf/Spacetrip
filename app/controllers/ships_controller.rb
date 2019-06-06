@@ -6,7 +6,7 @@ class ShipsController < ApplicationController
     @ships = Ship.geocoded
 
     if params[:query].present?
-      @ships = @ships.where(location: params[:query])
+      @ships = @ships.where(location: params[:query].downcase)
     end
 
     @markers = @ships.map do |ship|
