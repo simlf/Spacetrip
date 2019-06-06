@@ -1,6 +1,8 @@
-<%= link_to "Back to your ships", owner_ships_path %>
+<div>
+  <%= link_to "Back to your ships", owner_ships_path %>
+</div>
 
-<div class="form-devise">
+<div class="container form-devise">
 <h2>Rent your ship!</h2>
 
 <%= simple_form_for([:owner, @ship]) do |f| %>
