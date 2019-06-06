@@ -9,13 +9,13 @@
       <!-- <p>Pick a date</p> -->
     </div>
     <div class="infos">
-
-
       <%= simple_form_for [@ship, @booking] do |f| %>
-        <%= f.input :starting_date %>
-        <%= f.input :ending_date %>
-        <%= f.submit "Book now"%>
+        <%= f.input :starting_date, as: :string, required: true, input_html: {id: "range_start"} %>
+        <%= f.input :ending_date, as: :string, required: true, input_html: {id: "range_end"} %>
+        <%= f.button :submit, "Book now!", class: "btn btn-primary" %>
       <% end %>
     </div>
   </div>
 </div>
+
+
