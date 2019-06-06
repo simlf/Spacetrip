@@ -1,0 +1,21 @@
+<%= link_to "Back to your ships", owner_ships_path %>
+
+<div class="form-devise">
+<h2>Rent your ship!</h2>
+
+<%= simple_form_for([:owner, @ship]) do |f| %>
+  <%= f.input :name, placeholder: 'Marmac 303', :label => "What's the name of your ship?" %>
+  <%= f.input :location, placeholder: 'Lille', :label => "Where is it located?" %>
+  <%= f.input :description, placeholder: 'Very confortable and fast ship, in only 3 days you will be in Mars! ', :label => "Ship's description" %>
+  <%= f.input :capacity, placeholder: '5', :label => "How much person can you fin in the ship?" %>
+  <%= f.input :price, placeholder: '50', :label => "Price/week" %>
+
+  <%= f.input :photo %>
+
+  <%= f.button :submit, 'Rent it!', class: 'btn btn-primary' %>
+<% end %>
+</div>
+
+
+
+
