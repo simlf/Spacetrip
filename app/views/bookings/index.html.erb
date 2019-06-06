@@ -2,6 +2,7 @@
 <div class="container card-bookings">
   <% @bookings.each do |booking|%>
       <p>Booking <%= booking.id %> in ship <strong> <%= booking.ship.name.capitalize %> </strong></p>
+
     <ul>
       <li>Status : <%= booking.status %></li>
       <li>From <%= booking.starting_date %> to <%= booking.ending_date %></li>
