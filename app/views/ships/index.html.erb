@@ -1,15 +1,22 @@
 
-<div class="card-container">
+<div class="trip-container">
+  <div class="search">
+  <h4>Find a ship by location </h4>
   <%= form_tag ships_path, method: :get do %>
     <%= text_field_tag :query,
       params[:query],
       class: "form-control",
-      placeholder: "where"
+      placeholder: "Rennes, Paris, Vannes.."
     %>
   <% end %>
+  </div>
+  <div class="trip">
+    <h6>Experience the perfect ship,</h6>
+    <br>
+    <h6>fitting to any type of trip</h6>
+  </div>
 </div>
 
-<h1>Those ships are available:</h1>
 <div class="card-container">
     <div
       id="map"
@@ -28,8 +35,9 @@
             <h2><%= ship.name.capitalize %></h2>
             <p><%= ship.location.capitalize %></p>
           </div>
-          <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-trip-user avatar-bordered"/>
-          <h2><%= ship.capacity  %></h2>
+            <div class="icon">
+              <i class="fas fa-users"></i><h2><%= ship.capacity %></h2>
+            </div>
         </div>
       </div>
     <% end %>
