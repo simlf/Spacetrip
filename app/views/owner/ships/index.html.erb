@@ -1,5 +1,18 @@
-<h1>Those ships are available for <%= current_user.email %></h1>
+<h3>Your ships</h1>
 
+<%= link_to "Rent a new ship 🚀", new_owner_ship_path %>
 <!-- TBD : use the code for the non loggued version of the page -->
-
-
+<% current_user.ships.each do |ship| %>
+  <div class="card card-index">
+      <p><%= ship.photo %></p>
+        <div class="card-infos">
+          <div>
+            <h3><%= ship.name.capitalize %></h2>
+            <p><i class="fas fa-map-marked-alt"></i> <%= ship.location.capitalize %></p>
+            <p><i class="fas fa-users"></i> <%= ship.capacity %></p>
+            <p><%= ship.description.capitalize %></p>
+            <p><%= ship.price %>€/week</p>
+          </div>
+        </div>
+  </div>
+<% end %>
