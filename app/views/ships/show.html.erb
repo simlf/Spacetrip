@@ -1,3 +1,5 @@
+<div id="rails-data" data-price="<%= @ship.price %>"></div>
+
 <div class="block">
   <div class="background"><%= cl_image_tag @ship.photo, height: 300, width: 500, crop: :fill %></div>
   <div class="card-trip-infos">
@@ -6,10 +8,10 @@
       <h2 class="card-trip-pricing"> <%= @ship.price %>€ per week </h2>
       <p>Capacity : <%= @ship.capacity %> person(s)</p>
       <p><%= @ship.description %></p>
-      <!-- <p>Pick a date</p> -->
+      <p>Total price : <strong><span id="dynamic_price">0</span>€</strong></p>
     </div>
     <div class="infos">
-      <%= simple_form_for [@ship, @booking] do |f| %>
+        <%= simple_form_for [@ship, @booking] do |f| %>
         <%= f.input :starting_date, as: :string, required: true, input_html: {id: "range_start"} %>
         <%= f.input :ending_date, as: :string, required: true, input_html: {id: "range_end"} %>
         <%= f.button :submit, "Book now!", class: "btn btn-primary" %>
@@ -17,5 +19,4 @@
     </div>
   </div>
 </div>
-
 
