@@ -16,31 +16,33 @@
   <!--cards -------------------------------------------------------------------------------------- -->
 
   <div class="cards cards-home">
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_path "ship1.jpg" %>')">
-      Interceptor
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_path "ship4.jpg" %>')">
+      <%= link_to "Dolphin", ships_path(@ships) %>
     </div>
 
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_path "ship2.jpg" %>')">
-      UNSC Infinity
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_path "orca.jpg" %>')">
+       <%= link_to "VAS QUIB QUIB", bookings_path %>
     </div>
 
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_path "ship3.jpg" %>')">
-      Eagle MkII
+      <p class="link-ships-home"> <%= link_to "Curitosity", ships_path %> </p>
+
     </div>
   </div>
 
 
+
   <div class="cards cards-home">
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_path "ship4.jpg" %>')">
-      Dolphin
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_path "mambaship.jpg" %>')">
+      <%= link_to "Varity", ships_path %>
     </div>
 
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_path "ship5.jpg" %>')">
-      Python
+      <%= link_to "Python", ships_path %>
     </div>
 
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_path "ship6.jpg" %>')">
-      sidewinder
+        <%= link_to "sidewinder", ships_path %>
     </div>
   </div>
 
@@ -50,9 +52,38 @@
     </div>
     <div class="testimonial_bar">
 
-      <div class="testimonial">"Very nice trip to Mars" <br> <strong>John Harrell</strong></div>
-      <div class="testimonial">"I had an axesome honeyMoon thanks to Spacetrip" <br> <strong>Edward Cohen</strong></div>
-      <div class="testimonial">"The Millenium Falcon was so amazing" <br> <strong>Andrew Johnson</strong></div>
-      <div class="testimonial">"Our hosts were very nice to us" <br> <strong>Elisabeth Green</strong></div>
+
+      <div class="testimonial">"Very nice trip to Mars" <br> <strong>John Harrell</strong>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+      </div>
+        <div class="testimonial">"I had an axesome honeyMoon thanks to Spacetrip" <br> <strong>Edward Cohen</strong>
+          <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+      <div class="testimonial">"The Millenium Falcon was so amazing" <br> <strong>Andrew Johnson</strong>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+       </div>
+      <div class="testimonial">"Our hosts were very nice to us" <br> <strong>Elisabeth Green</strong>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+      </div>
     </div>
     <!-- Testimonials -->
