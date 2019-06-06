@@ -9,11 +9,6 @@ Rails.application.routes.draw do
 
   resources :bookings, only: [:index]
 
-  # Accept / refuse request bookings
-  # As an owner, I can see / accept / refuse all the pending bookings for my ships
-  # --[PATCH owner/bookings/booking_id/accept]
-  # -- [PATCH owner/bookings/booking_id/refuse]--
-
   namespace :owner do
     resources :ships, only: [:index, :new, :create]
     resources :bookings, only: [:index] do
@@ -23,4 +18,5 @@ Rails.application.routes.draw do
       end
     end
   end
+
 end
