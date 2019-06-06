@@ -1,18 +1,13 @@
 class ShipsController < ApplicationController
-
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     @ships = Ship.geocoded
-
-    if params[:query].present?
-      @ships = @ships.where(location: params[:query].downcase)
-    end
-
+    @ships = @ships.where(location: params[:query].downcase) if params[:query].present?
     @markers = @ships.map do |ship|
       {
         lat: ship.latitude,
-        lng: ship.longitude,
+        lng: ship.longitude
       }
     end
   end
@@ -20,6 +15,5 @@ class ShipsController < ApplicationController
   def show
     @ship = Ship.find(params[:id])
     @booking = Booking.new
-    # To be given to form
   end
 end
