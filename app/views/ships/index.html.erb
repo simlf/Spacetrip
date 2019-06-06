@@ -17,32 +17,30 @@
   </div>
 </div>
 
-<div class="card-container">
-    <div
-      id="map"
-      style="width: 400px;
-      height: auto;
-      margin: 10px 10px 0px 0px;"
-      data-markers="<%= @markers.to_json %>"
-      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-    ></div>
-  <% @ships.each do |ship| %>
-    <%= link_to ship_path(ship), class: "card-index-link" do %>
-      <div class="card card-index" >
-        <%= cl_image_tag ship.photo, crop: :fill %>
-        <div class="card-infos">
-          <div>
-            <h2><%= ship.name.capitalize %></h2>
-            <p><%= ship.location.capitalize %></p>
-          </div>
-            <div class="icon">
-              <i class="fas fa-users"></i><h2><%= ship.capacity %></h2>
+<div class="warp">
+  <div class="card-container">
+    <% @ships.each do |ship| %>
+      <%= link_to ship_path(ship), class: "card-index-link col-xs-8 col-sm-4" do %>
+        <div class="card card-index" >
+          <%= cl_image_tag ship.photo, crop: :fill %>
+          <div class="card-infos">
+            <div>
+              <h2><%= ship.name.capitalize %></h2>
+              <p><%= ship.location.capitalize %></p>
             </div>
+              <div class="icon">
+                <i class="fas fa-users"></i><h2><%= ship.capacity %></h2>
+              </div>
+          </div>
         </div>
-      </div>
+      <% end %>
     <% end %>
-<!-- ici -->
-  <% end %>
+  </div>
+  <div class="col-sm-3"
+    id="map"
+    style="width: 100%; height: 570px;"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+  ></div>
+
 </div>
-
-

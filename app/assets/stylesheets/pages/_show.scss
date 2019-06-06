@@ -1,8 +1,10 @@
 .block {
   display: flex;
   margin: 15px auto;
+  padding: 15px;
   width:900px;
   background-color: white;
+  border-radius: 5px;
 }
 
 .infos {
@@ -19,3 +21,29 @@
 .icon {
   text-align: center;
 }
+
+.warper {
+  display: flex;
+    h1 {
+  color: #801336;
+  margin-bottom: 0;
+  }
+    h2 {
+      color: grey;
+      margin-top: 0;
+    }
+}
+
+.box {
+  margin: auto;
+}
+
+.box {
+  max-width: auto;
+  padding: 1rem;
+  position: relative;
+  background: linear-gradient(to right, red, purple);
+  padding: 3px;
+}
+
+
