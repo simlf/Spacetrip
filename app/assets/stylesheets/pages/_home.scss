@@ -83,3 +83,33 @@ color: yellow;
 }
 
 
+h4 {
+  color: grey;
+  font-size: 20px;
+}
+
+.trip {
+  padding: 12px;
+  color: grey;
+  margin-left: 16px;
+  width: 816px;
+  h6 {
+    display: inline-block;
+    font-size: 25px;
+    background-color: black;
+    color: #fff;
+    padding: 0.5rem;
+
+  }
+}
+
+.search {
+  padding: 12px;
+  width: 400px;
+}
+
+.trip-container {
+  margin-top: 5px;
+  display: flex;
+  align-items: flex-start;
+}
