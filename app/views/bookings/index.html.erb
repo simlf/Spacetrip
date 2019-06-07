@@ -1,12 +1,26 @@
-<h1 class ="h1 bookings"> My bookings </h1>
-<div class="container card-bookings">
+
+
+
+<div class="books">
+  <h1 class ="h1 bookings"> My bookings </h1>
+
+
   <% @bookings.each do |booking|%>
-      <p>Booking <%= booking.id %> in ship <strong> <%= booking.ship.name.capitalize %> </strong></p>
+<div class="bookings-info">
 
-    <ul>
-      <li>Status : <%= booking.status %></li>
-      <li>From <%= booking.starting_date %> to <%= booking.ending_date %></li>
-    </ul>
-  <%end%>
+      <h3 class="title-bookings"><i class="fas fa-rocket"></i><strong> <%= booking.ship.name.capitalize %> </strong></h3>
 
-</div>
+      <ul>
+          <div class="photo-bookings"> <%= cl_image_tag booking.ship.photo, height: 200, width: 320, crop: :fill %> </div>
+          <h5 class="h5-bookings"> <strong><i class="fas fa-tablet"></i> <%= booking.status.capitalize %> </strong> </h5>
+          <h5 class="h5-bookings"> <i class="far fa-calendar-alt"></i>
+            From <strong> <%= booking.starting_date %></strong> <i class="fas fa-long-arrow-alt-right">   </i> To <strong><%= booking.ending_date  %></strong></h5>
+        </ul>
+      </div>
+    <%end%>
+  </div>
+
+
+
+
+
