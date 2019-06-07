@@ -1,0 +1,23 @@
+
+<div class="card-container">
+  <% @bookings.each do |booking| %>
+    <div class="card card-index" >
+      <div>
+        <p>Booking for</p>
+        <h1><%= booking.ship.name %></h1>
+        <div><%= cl_image_tag booking.ship.photo, height: 100, width: 100, crop: :fill %></div>
+
+
+        <h3><strong><%= booking.user.email %></strong></h3>
+        <h2>trip
+        <%= booking.starting_date %>
+        to
+        <%= booking.ending_date %>
+        </h2>
+        <%= booking.status %>
+
+
+      </div>
+    </div>
+  <% end %>
+</div>
