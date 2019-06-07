@@ -1,23 +1,22 @@
+<div class="warp">
+  <div class="card-container">
+    <% @bookings.each do |booking| %>
+      <div class="card card-index" style="padding: 10px;" >
+        <div>
+          <p>Booking for</p>
+          <h1><i class="fas fa-rocket"></i><%= booking.ship.name %></h1>
+          <div><%= cl_image_tag booking.ship.photo, height: 100, width: 100, crop: :fill %></div>
 
-<div class="card-container">
-  <% @bookings.each do |booking| %>
-    <div class="card card-index" >
-      <div>
-        <p>Booking for</p>
-        <h1><%= booking.ship.name %></h1>
-        <div><%= cl_image_tag booking.ship.photo, height: 100, width: 100, crop: :fill %></div>
-
-
-        <h3><strong><%= booking.user.email %></strong></h3>
-        <h2>trip
-        <%= booking.starting_date %>
-        to
-        <%= booking.ending_date %>
-        </h2>
-        <%= booking.status %>
-
-
+          <h3><strong><%= booking.user.email %></strong></h3>
+          <h5 class="h5-bookings"> <i class="far fa-calendar-alt"></i>
+          <%= booking.starting_date %>
+          <i class="fas fa-long-arrow-alt-right">   </i> To
+          <%= booking.ending_date %>
+          </h5>
+          <h5 class="h5-bookings"> <strong><i class="fas fa-tablet"></i>
+          <%= booking.status %></strong> </h5>
+        </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
