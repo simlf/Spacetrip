@@ -4,7 +4,7 @@
 <!-- TBD : use the code for the non loggued version of the page -->
 <% current_user.ships.each do |ship| %>
   <div class="card card-index">
-      <p><%= ship.photo %></p>
+      <p>  <div style="padding: 10px;"><%= cl_image_tag ship.photo, height: 100, width: 100, crop: :fill %></div></p>
         <div class="card-infos">
           <div>
             <h3><%= ship.name.capitalize %></h2>
