@@ -28,6 +28,15 @@
         <%= link_to root_path, class: "navbar-brand" do %>
         <%= image_tag "ship_logo.png" %>
       <% end %>
+
+    <div class="nav-item">
+      <% unless current_page?(root_path) %>
+        <%= link_to root_path, class: "nav-link" do %>
+          <h2 class="title">Spacetrip</h2>
+        <% end %>
+      <% end %>
+    </div>
+
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
       </button>
@@ -48,10 +57,17 @@
 
           <li class="nav-item">
             <% if user_signed_in? && current_user.bookings.size != 0 %>
-              <%= link_to "See all my bookings",bookings_path, class: "nav-link" %>
+              <%= link_to "My bookings",bookings_path, class: "nav-link" %>
             <% end %>
           </li>
 
+          <li class="nav-item">
+            <% if user_signed_in? && current_user.ships.size != 0 %>
+              <%= link_to "My ships",owner_ships_path, class: "nav-link" %>
+            <% elsif user_signed_in? %>
+              <%= link_to "Rent a ship",new_owner_ship_path, class: "nav-link" %>
+            <% end %>
+          </li>
 
           <li class="nav-item">
             <strong><a class="nav-link" href="#">
