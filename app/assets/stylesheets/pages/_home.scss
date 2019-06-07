@@ -1,7 +1,5 @@
 .home-banner {
-  margin: 10px auto;
-
-
+  margin: 0 auto 10px auto;
   h1 {
    font-size: 6rem;
    text-align: center;
@@ -27,6 +25,7 @@
 
 .product_desc{
   // background-color: red;
+  color: white;
   margin: 30px 0px 0px 0px;
   font-size:2rem;
   text-align: center;
@@ -69,9 +68,6 @@
     margin: 0px 570px;
 }
 
-
-
-
 .reviews h2 {
  text-size: 25px;
 }
@@ -80,6 +76,13 @@
   padding: 13px;
   border-radius: 3px;
   text-size: 25px;
+  background-color: #801336;
+  border-color: #801336;
+}
+
+.btn:hover {
+  background-color: #1A2B63;
+  border-color: #1A2B63;
 }
 
 .stars{
@@ -95,19 +98,20 @@ h4 {
 .trip {
   padding: 12px;
   color: grey;
-  margin-left: 16px;
+  margin-left: -30px;
   width: 816px;
   h6 {
     display: inline-block;
     font-size: 25px;
-    background-color: black;
-    color: #fff;
+    background-color: #801336;
+    color: #cecece;
     padding: 0.5rem;
   }
+}
 
 .search {
-  padding: 12px;
-  width: 400px;
+  padding: 30px;
+  width: 385px;
 }
 
 .trip-container {
@@ -115,4 +119,18 @@ h4 {
   display: flex;
   align-items: flex-start;
 }
+
+body {
+  background-color: #33313b;
+}
+
+.map {
+  margin-top: 10px;
+  display: block;
+}
+
+.warp {
+  padding: 0 15px 0 15px;
+  display: flex;
+  justify-content: center;
 }

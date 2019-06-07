@@ -1,22 +1,27 @@
 <div id="rails-data" data-price="<%= @ship.price %>"></div>
 
-<div class="block">
-  <div class="background"><%= cl_image_tag @ship.photo, height: 300, width: 500, crop: :fill %></div>
-  <div class="card-trip-infos">
-    <div class="infos">
-      <h1><strong><%= @ship.name.upcase  %></strong></h1>
-      <h2 class="card-trip-pricing"> <%= @ship.price %>€ per week </h2>
-      <p>Capacity : <%= @ship.capacity %> person(s)</p>
-      <p><%= @ship.description %></p>
-      <p>Total price : <strong><span id="dynamic_price">0</span>€</strong></p>
-    </div>
-    <div class="infos">
-        <%= simple_form_for [@ship, @booking] do |f| %>
-        <%= f.input :starting_date, as: :string, required: true, input_html: {id: "range_start"} %>
-        <%= f.input :ending_date, as: :string, required: true, input_html: {id: "range_end"} %>
-        <%= f.button :submit, "Book now!", class: "btn btn-primary" %>
-      <% end %>
+<div class="warper">
+  <div class="box">
+    <div><%= cl_image_tag @ship.photo, height: 300, width: 500, crop: :fill %></div>
+  </div>
+  <div class="block col-sm-4">
+    <div class="card-trip-infos">
+      <div class="infos">
+        <h1><strong><%= @ship.name.upcase  %></strong></h1>
+        <h2 class="card-trip-pricing"> <%= @ship.price %>€ per week </h2>
+        <p><i class="fas fa-users"></i> <%= @ship.capacity %> person(s)</p>
+        <p><%= @ship.description %></p>
+        <p>Total price : <strong><span id="dynamic_price">0</span>€</strong></p>
+      </div>
+      <div class="infos">
+          <%= simple_form_for [@ship, @booking] do |f| %>
+          <%= f.input :starting_date, as: :string, required: true, input_html: {id: "range_start"} %>
+          <%= f.input :ending_date, as: :string, required: true, input_html: {id: "range_end"} %>
+          <%= f.button :submit, "Book now!", class: "btn btn-primary" %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
+
 
